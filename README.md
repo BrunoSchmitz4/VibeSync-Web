@@ -40,7 +40,7 @@ Antes de começar, certifique-se de ter instalado:
 ### **Passos para rodar o projeto**  
 ```bash
 # Clone este repositório
-git clone https://github.com/seu-usuario/VibeSync.git
+git clone https://github.com/BrunoSchmitz4/VibeSync-Web.git
 
 # Acesse o diretório do projeto
 cd VibeSync
