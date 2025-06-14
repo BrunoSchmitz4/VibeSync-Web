@@ -6,7 +6,6 @@ import Criador from "./pages/Criador";
 import Descoberta from "./pages/Descoberta";
 import Playlist from "./pages/Playlist";
 import Config from "./pages/Config";
-import Header from "components/Header";
 
 function AppRoutes() {
   const token = localStorage.getItem("access_token");
