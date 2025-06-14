@@ -1,0 +1,30 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c1c1c;
+  padding: 10px 20px;
+  box-shadow: 0 0 10px #00ffb3;
+}
+
+.logo {
+  color: #00ffb3;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navList a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.active {
+  color: #00ffb3;
+  border-bottom: 2px solid #00ffb3;
+}

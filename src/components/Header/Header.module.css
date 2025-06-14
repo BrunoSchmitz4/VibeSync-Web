@@ -1,0 +1,37 @@
+.header {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 255, 128, 0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1db954;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #1ed760;
+}
+
+.logoutButton {
+  background-color: transparent;
+  color: #1db954;
+  border: 2px solid #1db954;
+  padding: 8px 16px;
+  border-radius: 24px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.logoutButton:hover {
+  background-color: #1db954;
+  color: black;
+}
