@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import LoginButton from "../../components/LoginButton";
+import Navbar from "components/Navbar";
+import styles from './Home.module.css'
 
 function Home() {
   const [searchParams] = useSearchParams();
@@ -44,11 +46,34 @@ function Home() {
 
   return (
     <>
-      <div className="homeContainer">
-        <h1>Bem-vindo à VibeSync</h1>
+      <Navbar />
+      <div className={styles.homeContainer}>
+        <h1 className={styles.homeTitle}>Bem-vindo à VibeSync</h1>
         <p>Crie playlists baseadas no seu humor e descubra novos sons com facilidade.</p>
-
-        {/* <LoginButton /> */}
+        <section className={styles.homeSection}>
+          <div className={styles.homeCard}>
+            <h2 className={styles.homeCardTitle}>O que é o VibeSync?</h2>
+            <span className={styles.homeCardDesc}>
+              O VibeSync é uma aplicação web que te ajuda à criar playlists para o Spotify!
+            </span>
+          </div>
+          <div className={styles.homeCard}>
+            <h2 className={styles.homeCardTitle}>Guia Rápido!</h2>
+            <span className={styles.homeCardDesc}>
+              <ul>
+                <li>
+                  <span>Dashboard</span>
+                  <p>No Dashboard você pode gerenciar as playlists criadas por você</p>
+                </li>
+                <li>
+                  <span>Criador</span>
+                  <p>No Criador você pode criar uma nova playlist baseada em um mood, gênero musical e mais!</p>
+                </li>
+              </ul>
+            </span>
+          </div>
+        </section>
+        <LoginButton />
       </div>
     </>
   );

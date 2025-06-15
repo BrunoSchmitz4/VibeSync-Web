@@ -1,7 +1,9 @@
-.navbar {
+.navbarContainer {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-around;
+  
   background-color: #1c1c1c;
   padding: 10px 20px;
   box-shadow: 0 0 10px #00ffb3;
@@ -9,22 +11,36 @@
 
 .logo {
   color: #00ffb3;
+  font-size: 24px;
   font-family: 'Montserrat', sans-serif;
 }
 
 .navList {
-  list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
   gap: 20px;
 }
 
-.navList a {
+.navItem {
   color: #e0e0e0;
   text-decoration: none;
   font-weight: bold;
+  border-bottom: 2px none #00ffb3;
 }
 
-.active {
+.navItem:hover {
+  transition: 0.5s;
   color: #00ffb3;
   border-bottom: 2px solid #00ffb3;
+}
+
+.navUserInfo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
 }

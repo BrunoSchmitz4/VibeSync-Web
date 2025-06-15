@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import LoginButton from "components/LoginButton";
 
 
 /**
@@ -42,19 +43,23 @@ function Navbar() {
     fetchUser();
   }, []);
 
+  // Se deus quiser não vai bugar denovo
   return (
-    <nav className={styles.navbar}>
+    <nav className={styles.navbarContainer}>
       <h2 className={styles.logo}>VibeSync</h2>
       <ul className={styles.navList}>
-        <li><Link to="/dashboard">Dashboard</Link></li>
-        <li><Link to="/criador">Criador</Link></li>
-        <li><Link to="/descoberta">Descoberta</Link></li>
-        <li><Link to="/playlists">Minhas Playlists</Link></li>
-        <li><Link to="/config">Config</Link></li>
+        <li><Link className={styles.navItem} to="/dashboard">Dashboard</Link></li>
+        <li><Link className={styles.navItem} to="/criador">Criador</Link></li>
+        <li><Link className={styles.navItem} to="/descoberta">Descoberta</Link></li>
+        <li><Link className={styles.navItem} to="/playlists">Minhas Playlists</Link></li>
+        <li><Link className={styles.navItem} to="/config">Config</Link></li>
       </ul>
-      <div className={styles.userInfo}>
-        <span>{userName}</span>
-        <button onClick={handleLogout}>Sair</button>
+      <div className={styles.navUserInfo}>
+        {/* Se o usuário estiver logado, aparece suas info */}
+        {/* <span>Oi, {userName}! bora criar uma playlist pro mood de hoje?</span>
+        <button onClick={handleLogout}>Sair</button> */}
+        {/* Senão, aparece o botão de login */}
+        <LoginButton />
       </div>
     </nav>
   );
