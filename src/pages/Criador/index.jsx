@@ -1,5 +1,23 @@
+import Navbar from "components/Navbar";
+import styles from './Criador.module.css'
+
 function Criador() {
-  return <h2 style={{ textAlign: "center", marginTop: "50px" }}>🎼 Criador de Playlists</h2>;
+  return (
+    <>
+      <Navbar></Navbar>
+      <br />
+      <div className={styles.criadorContainer}>
+        <section className={styles.criadorSection}>
+
+        </section>
+        <section className={styles.criadorSection}>
+          
+        </section>
+        {/* A pessoa primeiro escolhe em quê será baseado sua nova playlist */}
+        {/* Ela pode dar um título, uma descrição e imagem, se quiser */}
+      </div>
+    </>
+  )
 }
 
 export default Criador;

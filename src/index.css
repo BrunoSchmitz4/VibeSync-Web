@@ -7,6 +7,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+    overflow: auto;
+  scrollbar-width: none; /* Para navegadores como Firefox */
+  -ms-overflow-style: none; /* Para Internet Explorer e Edge antigo */
 }
 
 code {

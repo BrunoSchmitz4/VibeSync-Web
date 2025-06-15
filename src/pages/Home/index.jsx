@@ -51,25 +51,34 @@ function Home() {
         <h1 className={styles.homeTitle}>Bem-vindo à VibeSync</h1>
         <p>Crie playlists baseadas no seu humor e descubra novos sons com facilidade.</p>
         <section className={styles.homeSection}>
-          <div className={styles.homeCard}>
+          {/* <div className={styles.homeCard}>
             <h2 className={styles.homeCardTitle}>O que é o VibeSync?</h2>
             <span className={styles.homeCardDesc}>
               O VibeSync é uma aplicação web que te ajuda à criar playlists para o Spotify!
             </span>
+          </div> */}
+          <div className={styles.homeCard}>
+            <h2 className={styles.homeCardTitle}>Dashboard</h2>
+            <span className={styles.homeCardDesc}>
+                <p>No Dashboard você pode gerenciar as playlists criadas por você</p>
+            </span>
           </div>
           <div className={styles.homeCard}>
-            <h2 className={styles.homeCardTitle}>Guia Rápido!</h2>
+            <h2 className={styles.homeCardTitle}>Criador</h2>
             <span className={styles.homeCardDesc}>
-              <ul>
-                <li>
-                  <span>Dashboard</span>
-                  <p>No Dashboard você pode gerenciar as playlists criadas por você</p>
-                </li>
-                <li>
-                  <span>Criador</span>
-                  <p>No Criador você pode criar uma nova playlist baseada em um mood, gênero musical e mais!</p>
-                </li>
-              </ul>
+                <p>Em Criador, você poderá criar novas playlists, basta dar um tema e um título, nós faremos o resto.</p>
+            </span>
+          </div>
+          <div className={styles.homeCard}>
+            <h2 className={styles.homeCardTitle}>Descoberta</h2>
+            <span className={styles.homeCardDesc}>
+                <p>Afim de novidade? Sem problemas. Em Descoberta, você verá várias playlists diferentes. Escolha a do seu agrado.</p>
+            </span>
+          </div>
+          <div className={styles.homeCard}>
+            <h2 className={styles.homeCardTitle}>Minhas Playlist</h2>
+            <span className={styles.homeCardDesc}>
+                <p>Você pode gerenciar suas playlist, editar a mixtape, dar um novo significado ou simplesmente excluir ela. Você quem escolhe!</p>
             </span>
           </div>
         </section>

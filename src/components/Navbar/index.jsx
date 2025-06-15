@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import LoginButton from "components/LoginButton";
 
-
 /**
  * 
  * @returns Componente Navbar()
@@ -52,7 +51,7 @@ function Navbar() {
         <li><Link className={styles.navItem} to="/criador">Criador</Link></li>
         <li><Link className={styles.navItem} to="/descoberta">Descoberta</Link></li>
         <li><Link className={styles.navItem} to="/playlists">Minhas Playlists</Link></li>
-        <li><Link className={styles.navItem} to="/config">Config</Link></li>
+        <li><Link className={styles.navItem} to="/config">Configurações</Link></li>
       </ul>
       <div className={styles.navUserInfo}>
         {/* Se o usuário estiver logado, aparece suas info */}
