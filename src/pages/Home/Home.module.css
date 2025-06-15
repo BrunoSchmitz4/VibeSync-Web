@@ -63,7 +63,8 @@ button:hover {
   border-radius: 4px;
   width: 200px;
   height: 260px;
-  background-color: #363636;
+  padding: 10px;
+  background-color: #292929;
 }
 
 .homeCard:hover {
@@ -78,4 +79,75 @@ button:hover {
 .homeCardDesc {
   width: 90%;
   text-align: justify;
+}
+
+.homeCardLarge {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 4px;
+  width: 600px;
+  /* height: 260px; */
+  background-color: #292929;
+  margin: 20px;
+  padding: 10px;
+}
+
+.homeCardLarge:hover {
+  transition: 0.5s;
+  box-shadow: 0px 4px 4px #00ffb3;
+}
+
+.homeCardLargeTitle {
+  color: #00ffb3;
+  font-size: 24px;
+}
+
+.homeCardLargeContent {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeCardLargeDesc {
+  text-align: justify;
+}
+.homeCardLargeImg {
+  width: 280px;
+  margin: 10px;
+}
+
+@media (max-width: 650px) {
+  .homeContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .homeCardLarge {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 4px;
+    width: 300px;
+    background-color: #292929;
+    padding: 10px;
+    margin: auto;
+  }
+  .homeCardLargeContent {
+    display: flex;
+    flex-direction: column;
+
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+  }
 }

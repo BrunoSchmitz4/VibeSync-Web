@@ -33,7 +33,7 @@
 
 .dashBoardAlertSuccess, .dashBoardAlertWarning {
     max-width: 90%;
-    color: #525252;
+    color: #fcfcfc;
     background-color: #1b1b1b;
     text-align: center;
     width: max-content;

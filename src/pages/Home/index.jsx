@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
-import LoginButton from "../../components/LoginButton";
 import Navbar from "components/Navbar";
 import styles from './Home.module.css'
+import imgMusics from '../../assets/ImageWallpaperSpotifyMusics.jpg' 
 
 function Home() {
   const [searchParams] = useSearchParams();
@@ -47,16 +47,19 @@ function Home() {
   return (
     <>
       <Navbar />
+      <br />
       <div className={styles.homeContainer}>
-        <h1 className={styles.homeTitle}>Bem-vindo à VibeSync</h1>
-        <p>Crie playlists baseadas no seu humor e descubra novos sons com facilidade.</p>
-        <section className={styles.homeSection}>
-          {/* <div className={styles.homeCard}>
-            <h2 className={styles.homeCardTitle}>O que é o VibeSync?</h2>
-            <span className={styles.homeCardDesc}>
-              O VibeSync é uma aplicação web que te ajuda à criar playlists para o Spotify!
+        {/* <h1 className={styles.homeTitle}>Bem-vindo à VibeSync</h1> */}
+        <div className={styles.homeCardLarge}>
+            <h2 className={styles.homeCardLargeTitle}>O que é o VibeSync?</h2>
+            <span className={styles.homeCardLargeContent}>
+                <p className={styles.homeCardLargeDesc}>"O VibeSync é uma aplicação web feita para ajudar você à criar adicionar novas playlists de música à sua rotina diária. Seja criando novas do zero, ou simplesmente descobrindo outras já prontas, apenas aguardando para serem ouvidas.
+                  VibeSync foi desenvolvida em React (isso significa estilo, segurança e performance, viu? 😉🎶)."</p>
+                <img className={styles.homeCardLargeImg} src={imgMusics} alt="Imagem de Álbum" />
             </span>
-          </div> */}
+        </div>
+        <iframe title="Spotify Hipsters.Tech Podcast iFrame" src="https://open.spotify.com/embed/show/2p0Vx75OmfsXktyLBuLuSf?utm_source=generator&theme=0" width="65%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <section className={styles.homeSection}>
           <div className={styles.homeCard}>
             <h2 className={styles.homeCardTitle}>Dashboard</h2>
             <span className={styles.homeCardDesc}>
@@ -82,7 +85,6 @@ function Home() {
             </span>
           </div>
         </section>
-        <LoginButton />
       </div>
     </>
   );

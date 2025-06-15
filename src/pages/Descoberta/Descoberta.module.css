@@ -1,0 +1,13 @@
+.descobertaContainer {
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+
+}
+
+.spotifyPlaylist {
+    width: 420px;
+}

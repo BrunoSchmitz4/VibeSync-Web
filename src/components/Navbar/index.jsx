@@ -15,6 +15,8 @@ import LoginButton from "components/LoginButton";
  * @author BruninSchmitz4
  */
 function Navbar() {
+  const token = localStorage.getItem("access_token");
+
   const [userName, setUserName] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
@@ -45,9 +47,12 @@ function Navbar() {
   // Se deus quiser não vai bugar denovo
   return (
     <nav className={styles.navbarContainer}>
-      <h2 className={styles.logo}>VibeSync</h2>
+      <h2>
+        <Link className={styles.logo} to={"/"}>VibeSync</Link>
+      </h2>
+      
       <ul className={styles.navList}>
-        <li><Link className={styles.navItem} to="/dashboard">Dashboard</Link></li>
+        <li><Link className={styles.navItem} to={"/dashboard"}>Dashboard</Link></li>
         <li><Link className={styles.navItem} to="/criador">Criador</Link></li>
         <li><Link className={styles.navItem} to="/descoberta">Descoberta</Link></li>
         <li><Link className={styles.navItem} to="/playlists">Minhas Playlists</Link></li>
