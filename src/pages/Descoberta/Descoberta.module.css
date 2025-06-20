@@ -1,13 +1,81 @@
 .descobertaContainer {
-    display: flex;
-    width: 90%;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    margin: auto;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 40px;
 }
 
-.spotifyPlaylist {
-    width: 420px;
+.descobertaSection {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  gap: 20px;
+  padding: 20px;
+  background-color: #1b1b1b;
+  border-radius: 8px;
+}
+
+.descobertaSectionTitle {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.descobertaSectionTitle:hover {
+  transition: 0.2s;
+  color: #00ffb3;
+}
+
+.descobertaSectionContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.descobertaBox {
+  flex: 1;
+  min-width: 300px;
+  background-color: #2c2c2c;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.descobertaBoxTitle {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.descobertaBoxContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.descobertaBoxContent iframe {
+  width: 400px;
+  border-radius: 10px;
+  max-width: 80%;
+  flex: 1 1 45%;
+  min-width: 200px;
+}
+
+@media (max-width: 768px) {
+  .descobertaSectionContent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .descobertaBox {
+    max-width: 100%;
+  }
+
+  .descobertaBoxContent iframe {
+    flex: 1 1 100%;
+  }
 }

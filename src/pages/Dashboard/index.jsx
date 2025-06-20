@@ -17,7 +17,6 @@ function Dashboard() {
 
   return (
     <>
-    <Navbar />
     <div className={styles.dashboardContainer}>
       <br />
       <section className={styles.dashboardSection}>

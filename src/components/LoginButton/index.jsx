@@ -1,3 +1,4 @@
+// src/components/LoginButton.js
 import React from "react";
 import styles from "./LoginButton.module.css";
 import { generateRandomString, generateCodeChallenge } from "../../services/pkce";
@@ -16,6 +17,7 @@ function LoginButton() {
     const codeVerifier = generateRandomString(128);
     const codeChallenge = await generateCodeChallenge(codeVerifier);
     localStorage.setItem("spotify_code_verifier", codeVerifier);
+    localStorage.setItem("last_page", window.location.pathname); // salva rota anterior
 
     const params = new URLSearchParams({
       response_type: "code",

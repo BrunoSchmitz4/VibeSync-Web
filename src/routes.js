@@ -1,26 +1,27 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import Criador from "./pages/Criador";
 import Descoberta from "./pages/Descoberta";
 import Playlist from "./pages/Playlist";
 import Config from "./pages/Config";
+import useSpotifyAuth from "./hooks/useSpotifyAuth";
 
 function AppRoutes() {
-  const token = localStorage.getItem("access_token");
+  useSpotifyAuth(); // ativa o hook de login no carregamento da aplicação
 
   return (
     <BrowserRouter>
-    {/* {!token && <Header />} */}
-      {token && <Navbar />} {/* Exibe só após login */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/criador" element={<Criador />} />
-        <Route path="/descoberta" element={<Descoberta />} />
-        <Route path="/playlists" element={<Playlist />} />
-        <Route path="/config" element={<Config />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="criador" element={<Criador />} />
+          <Route path="descoberta" element={<Descoberta />} />
+          <Route path="playlists" element={<Playlist />} />
+          <Route path="config" element={<Config />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

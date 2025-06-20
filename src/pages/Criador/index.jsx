@@ -4,7 +4,6 @@ import styles from './Criador.module.css'
 function Criador() {
   return (
     <>
-      <Navbar></Navbar>
       <br />
       <div className={styles.criadorContainer}>
         <section className={styles.criadorSection}>
