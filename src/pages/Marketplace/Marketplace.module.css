@@ -1,0 +1,15 @@
+.marketplaceContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+
+.marketplaceTitle {
+  font-size: 1.8rem;
+  color: #00ffb3;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}

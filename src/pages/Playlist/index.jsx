@@ -39,33 +39,37 @@ function Playlist() {
   if (loading) return <p className={styles.loading}>Carregando playlists...</p>;
 
   return (
-    <div className={styles.playlistContainer}>
-      <h1>Minhas Playlists</h1>
-      <div className={styles.playlistGrid}>
-        {playlists.map((playlist) => (
-          <div key={playlist.id} className={styles.playlistCard}>
-            <img
-              src={playlist.images[0]?.url || "https://via.placeholder.com/300"}
-              alt={playlist.name}
-              className={styles.playlistImage}
-            />
-            <div className={styles.playlistInfo}>
-              <h3>{playlist.name}</h3>
-              <p><strong>Dono:</strong> {playlist.owner.display_name}</p>
-              <p><strong>Músicas:</strong> {playlist.tracks.total}</p>
-              <a
-                href={playlist.external_urls.spotify}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.openBtn}
-              >
-                Abrir no Spotify
-              </a>
+    <>
+      <div className={styles.playlistContainer}>
+        <br />
+        <h2 className={styles.playlistTitle}>Suas playlists</h2>
+        <section className={styles.playlistSection}>
+          {playlists.map((playlist) => (
+            <div key={playlist.id} className={styles.playlistCard}>
+              <img
+                src={playlist.images[0]?.url || "https://via.placeholder.com/300"}
+                alt={playlist.name}
+                className={styles.playlistImage}
+              />
+              <div className={styles.playlistInfo}>
+                <h3 className={styles.playlistName}>{playlist.name}</h3>
+                {/* <p><strong>Dono:</strong> {playlist.owner.display_name}</p> */}
+                <p><strong>Músicas:</strong> {playlist.tracks.total}</p>
+                <a
+                  href={playlist.external_urls.spotify}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.openBtn}
+                >
+                  Abrir no Spotify
+                </a>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </section>
       </div>
-    </div>
+    </>
+
   );
 }
 

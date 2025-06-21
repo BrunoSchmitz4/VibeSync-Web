@@ -7,6 +7,7 @@ import Descoberta from "./pages/Descoberta";
 import Playlist from "./pages/Playlist";
 import Config from "./pages/Config";
 import useSpotifyAuth from "./hooks/useSpotifyAuth";
+import Marketplace from "pages/Marketplace";
 
 function AppRoutes() {
   useSpotifyAuth(); // ativa o hook de login no carregamento da aplicação
@@ -20,6 +21,7 @@ function AppRoutes() {
           <Route path="criador" element={<Criador />} />
           <Route path="descoberta" element={<Descoberta />} />
           <Route path="playlists" element={<Playlist />} />
+          <Route path="marketplace" element={<Marketplace />} />
           <Route path="config" element={<Config />} />
         </Route>
       </Routes>

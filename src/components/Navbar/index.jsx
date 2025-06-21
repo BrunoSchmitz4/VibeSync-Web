@@ -56,6 +56,7 @@ function Navbar() {
         <li><Link className={styles.navItem} to="/criador">Criador</Link></li>
         <li><Link className={styles.navItem} to="/descoberta">Descoberta</Link></li>
         <li><Link className={styles.navItem} to="/playlists">Minhas Playlists</Link></li>
+        <li><Link className={styles.navItem} to="/Marketplace">Marketplace</Link></li>
         <li><Link className={styles.navItem} to="/config">Configurações</Link></li>
       </ul>
 
