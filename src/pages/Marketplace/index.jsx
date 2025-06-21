@@ -7,6 +7,7 @@ import useSpotifyAuth from "../../hooks/useSpotifyAuth";
 function Marketplace() {
   const token = useSpotifyAuth();
   const [artists, setArtists] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (!token) return;
@@ -18,10 +19,20 @@ function Marketplace() {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log("Dados recebidos dos artistas:", data);
         setArtists(data.items || []);
+        setLoading(false);
       })
-      .catch((err) => console.error("Erro ao buscar artistas:", err));
+      .catch((err) => {
+        console.error("Erro ao buscar artistas:", err);
+        setLoading(false);
+      });
   }, [token]);
+
+  if (!token || loading) {
+    return <p className={styles.loading}>Carregando dados dos artistas...</p>;
+  }
+
 
   return (
     <div className={styles.marketplaceContainer}>

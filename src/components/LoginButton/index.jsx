@@ -9,7 +9,8 @@ const SCOPES = [
   "user-read-private",
   "user-read-email",
   "playlist-modify-public",
-  "playlist-modify-private"
+  "playlist-modify-private",
+  "user-top-read"
 ].join(" ");
 
 function LoginButton() {
