@@ -114,7 +114,7 @@ body[data-theme="dark"] .productCard {
 
 /* Tema Claro (inspirado no Light Mode do Spotify) */
 body[data-theme="light"] {
-  background-color: #ffffff;
+  background-color: #e6e6e6;
   color: #121212;
 }
 

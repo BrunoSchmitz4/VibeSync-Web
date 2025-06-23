@@ -40,17 +40,19 @@ function Playlist() {
 
   return (
     <>
+    <br />
+        <h2 className={styles.pageTitle}>Suas playlists</h2>
+    <br />
       <div className={styles.playlistContainer}>
         <br />
-        <h2 className={styles.playlistTitle}>Suas playlists</h2>
         <section className={styles.playlistSection}>
           {playlists.map((playlist) => (
             <div key={playlist.id} className={styles.playlistCard}>
-              <img
-                src={playlist.images[0]?.url || "https://via.placeholder.com/300"}
-                alt={playlist.name}
-                className={styles.playlistImage}
-              />
+              {playlist.images?.[0]?.url && (
+                <img src={playlist.images[0].url} alt={playlist.name} />
+              )}
+
+
               <div className={styles.playlistInfo}>
                 <h3 className={styles.playlistName}>{playlist.name}</h3>
                 {/* <p><strong>Dono:</strong> {playlist.owner.display_name}</p> */}

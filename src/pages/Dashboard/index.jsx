@@ -1,4 +1,5 @@
 import useSpotifyAuth from '../../hooks/useSpotifyAuth';
+import { useEffect, useState } from "react";
 import styles from './Dashboard.module.css'
 
 /**
@@ -12,7 +13,42 @@ import styles from './Dashboard.module.css'
  * @author BruninSchmitz4
  */
 function Dashboard() {
-  const token = useSpotifyAuth();
+  const tokenAuth = useSpotifyAuth();
+
+  const [playlists, setPlaylists] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const token = localStorage.getItem("access_token");
+
+  useEffect(() => {
+    const fetchPlaylists = async () => {
+      try {
+        const res = await fetch("https://api.spotify.com/v1/me/playlists?limit=50", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+
+        const data = await res.json();
+
+        if (data.items) {
+          const ordered = data.items.sort((a, b) =>
+            b.snapshot_id.localeCompare(a.snapshot_id)
+          );
+          setPlaylists(ordered);
+        } else {
+          console.error("Erro ao carregar playlists:", data);
+        }
+      } catch (err) {
+        console.error("Erro na requisição:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPlaylists();
+  }, [token]);
+
+  if (loading) return <p className={styles.loading}>Carregando playlists...</p>;
 
   return (
     <>
@@ -20,31 +56,106 @@ function Dashboard() {
     <h2 className={styles.pageTitle}>Dashboard</h2>
     <br />
     <div className={styles.pageContainer}>
-      <br />
       <section className={styles.pageSection}>
+        <div className={styles.sectionTitle}>Suas playlists</div>
         <div className={styles.pageBox}>
-          <h2 className={styles.dashboardSectionTitle}>Suas playlists</h2>
+            {playlists.map((playlist) => (
+            <div key={playlist.id} className={styles.playlistCard}>
+              {playlist.images?.[0]?.url && (
+                <img src={playlist.images[0].url} alt={playlist.name} />
+              )}
+              <div className={styles.playlistInfo}>
+                <h3 className={styles.playlistName}>{playlist.name}</h3>
+                <p><strong>Músicas:</strong> {playlist.tracks.total}</p>
+                <a
+                  href={playlist.external_urls.spotify}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.openBtn}
+                >
+                  Abrir no Spotify
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
       <section className={styles.pageSection}>
+        <div className={styles.sectionTitle}>O Melhor de Cada Artista</div>
         <div className={styles.pageBox}>
-          <h2 className={styles.dashboardSectionTitle}>O Melhor de Cada Artista</h2>
+            {playlists.map((playlist) => (
+            <div key={playlist.id} className={styles.playlistCard}>
+              {playlist.images?.[0]?.url && (
+                <img src={playlist.images[0].url} alt={playlist.name} />
+              )}
+              <div className={styles.playlistInfo}>
+                <h3 className={styles.playlistName}>{playlist.name}</h3>
+                <p><strong>Músicas:</strong> {playlist.tracks.total}</p>
+                <a
+                  href={playlist.external_urls.spotify}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.openBtn}
+                >
+                  Abrir no Spotify
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
       <section className={styles.pageSection}>
+        <div className={styles.sectionTitle}>#EssaÉTuaVibe</div>
         <div className={styles.pageBox}>
-          <h2 className={styles.dashboardSectionTitle}>#EssaÉTuaVibe</h2>
+            {playlists.map((playlist) => (
+            <div key={playlist.id} className={styles.playlistCard}>
+              {playlist.images?.[0]?.url && (
+                <img src={playlist.images[0].url} alt={playlist.name} />
+              )}
+              <div className={styles.playlistInfo}>
+                <h3 className={styles.playlistName}>{playlist.name}</h3>
+                <p><strong>Músicas:</strong> {playlist.tracks.total}</p>
+                <a
+                  href={playlist.external_urls.spotify}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.openBtn}
+                >
+                  Abrir no Spotify
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
       <section className={styles.pageSection}>
+        <div className={styles.sectionTitle}>Já Ouviu Essas?</div>
         <div className={styles.pageBox}>
-          <h2 className={styles.dashboardSectionTitle}>Já Ouviu Essas?</h2>
+            {playlists.map((playlist) => (
+            <div key={playlist.id} className={styles.playlistCard}>
+              {playlist.images?.[0]?.url && (
+                <img src={playlist.images[0].url} alt={playlist.name} />
+              )}
+              <div className={styles.playlistInfo}>
+                <h3 className={styles.playlistName}>{playlist.name}</h3>
+                <p><strong>Músicas:</strong> {playlist.tracks.total}</p>
+                <a
+                  href={playlist.external_urls.spotify}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.openBtn}
+                >
+                  Abrir no Spotify
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
-      <section className={styles.pageSection}>
+
+      {/* <section className={styles.pageSection}>
         <div className={styles.pageBox}>
-          {/* Teste de Token */}
-          {token ? (
+          {tokenAuth ? (
             <div className={styles.dashBoardAlertSuccess}>
               <h2>Logado com Spotify! Token recebido com sucesso.</h2>
             </div>
@@ -55,7 +166,7 @@ function Dashboard() {
             </div>
           )}
         </div>
-      </section>
+      </section> */}
     </div>
     </>
 
