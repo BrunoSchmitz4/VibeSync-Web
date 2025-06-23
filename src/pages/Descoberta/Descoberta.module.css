@@ -1,12 +1,28 @@
-.descobertaContainer {
+.pageTitle {
+  width: 80%;
+  font-size: 24px;
+  color: #00FFB3;
+  text-align: start;
+  margin: auto;
+}
+
+.pageContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: center;
+  justify-content: space-between;
   gap: 20px;
-  padding-bottom: 40px;
+  padding: 10px;
+  margin: auto;
+  max-width: 1500px;
+  height: max-content;
+  background-color: #1b1b1b;
+  border: none;
+  border-radius: 8px;
 }
 
-.descobertaSection {
+.pageSection {
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -14,6 +30,34 @@
   padding: 20px;
   background-color: #1b1b1b;
   border-radius: 8px;
+}
+
+.sectionTitle {
+  width: 90%;
+  color: #e0e0e0;
+  font-size: 20px;
+  text-align: start;
+}
+
+.pageBox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.boxTitle {
+  width: 90%;
+  color: #e0e0e0;
+  font-size: 16px;
+  text-align: center;
+}
+
+
+.descobertaBoxContent {
+  min-width: 320px;
 }
 
 .descobertaSectionTitle {

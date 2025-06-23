@@ -1,15 +1,16 @@
-import Navbar from "components/Navbar";
 import styles from './Criador.module.css'
 
 function Criador() {
   return (
     <>
       <br />
-      <div className={styles.criadorContainer}>
-        <section className={styles.criadorSection}>
+      <h2 className={styles.pageTitle}>Criador de Playlist</h2>
+      <br />
+      <div className={styles.pageContainer}>
+        <section className={styles.pageSection}>
 
         </section>
-        <section className={styles.criadorSection}>
+        <section className={styles.pageSection}>
           
         </section>
         {/* A pessoa primeiro escolhe em quê será baseado sua nova playlist */}

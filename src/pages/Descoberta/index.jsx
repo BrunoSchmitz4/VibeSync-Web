@@ -20,63 +20,60 @@ function Descoberta() {
   ];
 
   return (
-    <div className={styles.descobertaContainer}>
-      <br />
-      <section className={styles.descobertaSection}>
-
-        <h2 className={styles.descobertaSectionTitle}>Parecidos com seu estilo</h2>
-
-        <div className={styles.descobertaSectionContent}>
-          <div className={styles.descobertaBox}>
-            <h3 className={styles.descobertaBoxTitle}>Músicas</h3>
-            <div className={styles.descobertaBoxContent}>
-              {similarTracks.map((id, index) => (
-                <SpotifyEmbed key={id} title={`similarTrack${index}`} src={`https://open.spotify.com/embed/track/${id}`} />
-              ))}
-            </div>
-          </div>
-          <div className={styles.descobertaSectionContent}>
-            <div className={styles.descobertaBox}>
-              <h3 className={styles.descobertaBoxTitle}>Playlists</h3>
+    <>
+    <br />
+    <h2 className={styles.pageTitle}>Descoberta</h2>
+    <br />
+      <div className={styles.pageContainer}>
+        <section className={styles.pageSection}>
+          <h2 className={styles.sectionTitle}>Parecidos com seu estilo</h2>
+          <div className={styles.pageBox}>
+            <h3 className={styles.boxTitle}>Músicas</h3>
+            <div className={styles.pageContent}>
               <div className={styles.descobertaBoxContent}>
-                {similarPlaylists.map((id, index) => (
-                  <SpotifyEmbed key={id} title={`similarPlaylists${index}`} src={`https://open.spotify.com/embed/playlist/${id}`} />
+                {similarTracks.map((id, index) => (
+                  <SpotifyEmbed key={id} title={`similarTrack${index}`} src={`https://open.spotify.com/embed/track/${id}`} />
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-
-      </section>
-
-      <section className={styles.descobertaSection}>
-
-        <h2 className={styles.descobertaSectionTitle}>Aleatórios do Spotify</h2>
-
-        <div className={styles.descobertaSectionContent}>
-          <div className={styles.descobertaBox}>
-            <h3 className={styles.descobertaBoxTitle}>Músicas</h3>
-            <div className={styles.descobertaBoxContent}>
-              {similarTracks.map((id, index) => (
-                <SpotifyEmbed key={id} title={`similarTrack${index}`} src={`https://open.spotify.com/embed/track/${id}`} />
-              ))}
-            </div>
-          </div>
-          <div className={styles.descobertaSectionContent}>
-            <div className={styles.descobertaBox}>
-              <h3 className={styles.descobertaBoxTitle}>Playlists</h3>
-              <div className={styles.descobertaBoxContent}>
-                {similarPlaylists.map((id, index) => (
-                  <SpotifyEmbed key={id} title={`similarPlaylists${index}`} src={`https://open.spotify.com/embed/playlist/${id}`} />
-                ))}
+          <div className={styles.pageBox}>
+              <h3 className={styles.boxTitle}>Playlists</h3>
+              <div className={styles.pageContent}>
+                <div className={styles.descobertaBoxContent}>
+                  {similarPlaylists.map((id, index) => (
+                    <SpotifyEmbed key={id} title={`similarPlaylists${index}`} src={`https://open.spotify.com/embed/playlist/${id}`} />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+        <section className={styles.pageSection}>
+          <h2 className={styles.sectionTitle}>Aleatórias do Spotify</h2>
+          <div className={styles.pageBox}>
+            <h3 className={styles.boxTitle}>Músicas</h3>
+            <div className={styles.pageContent}>
+              <div className={styles.descobertaBoxContent}>
+                {similarTracks.map((id, index) => (
+                  <SpotifyEmbed key={id} title={`similarTrack${index}`} src={`https://open.spotify.com/embed/track/${id}`} />
+                ))}
+              </div>
+            </div>
+          <div className={styles.pageBox}>
+              <h3 className={styles.boxTitle}>Playlists</h3>
+              <div className={styles.pageContent}>
+                <div className={styles.descobertaBoxContent}>
+                  {similarPlaylists.map((id, index) => (
+                    <SpotifyEmbed key={id} title={`similarPlaylists${index}`} src={`https://open.spotify.com/embed/playlist/${id}`} />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
 
-      </section>
-
-    </div>
   );
 }
 

@@ -1,50 +1,55 @@
 .artistSection {
-  animation: fadeInUp 0.6s ease forwards;
-  opacity: 0; /* inicia invisível até a animação aplicar */
-  /* restante do estilo que você já tem */
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  width: 90%;
   gap: 2rem;
-  padding: 2rem;
-  margin: auto;
   background-color: #1b1b1b;
   border-radius: 12px;
-}
-
-
-.artistInfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 200px;
-  text-align: center;
+  padding: 2rem;
+  width: 90%;
+  margin: auto;
+  align-items: flex-start;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
 }
 
 .artistImage {
-  width: 160px;
-  height: 160px;
+  width: 300px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0px 4px 8px rgba(0, 255, 179, 0.4);
+  border-radius: 1rem;
+}
+
+.artistContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
 }
 
 .artistName {
-  margin-top: 0.8rem;
-  color: #00ffb3;
-  font-size: 1.2rem;
+  color: #fff;
+  font-size: 1.6rem;
   font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .productList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  flex: 1;
+  overflow-x: auto;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Scrollbar estilizada */
+.productList::-webkit-scrollbar {
+  height: 8px;
+}
+
+.productList::-webkit-scrollbar-thumb {
+  background-color: #00ffb3;
+  border-radius: 4px;
 }
 
 @media (max-width: 768px) {
@@ -53,8 +58,13 @@
     align-items: center;
   }
 
-  .artistInfo {
-    width: auto;
+  .artistImage {
+    width: 200px;
+    height: 200px;
+  }
+
+  .artistName {
+    font-size: 1.2rem;
   }
 }
 

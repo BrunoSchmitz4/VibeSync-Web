@@ -22,21 +22,22 @@ function ArtistSection({ artist }) {
   ];
 
   return (
-    <section className={styles.artistSection}>
-      <div className={styles.artistInfo}>
-        <img
-          className={styles.artistImage}
-          src={artist.images[0]?.url}
-          alt={`Foto de ${artist.name}`}
-        />
-        <h2 className={styles.artistName}>{artist.name}</h2>
-      </div>
-      <div className={styles.productList}>
-        {products.map((product, idx) => (
-          <ProductCard key={idx} product={product} />
-        ))}
-      </div>
-    </section>
+<section className={styles.artistSection}>
+  <img
+    className={styles.artistImage}
+    src={artist.images[0]?.url}
+    alt={`Foto de ${artist.name}`}
+  />
+
+  <div className={styles.artistContent}>
+    <h2 className={styles.artistName}>{artist.name}</h2>
+    <div className={styles.productList}>
+      {products.map((product, idx) => (
+        <ProductCard key={idx} product={product} />
+      ))}
+    </div>
+  </div>
+</section>
   );
 }
 

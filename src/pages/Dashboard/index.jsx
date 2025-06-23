@@ -1,4 +1,3 @@
-import Navbar from 'components/Navbar';
 import useSpotifyAuth from '../../hooks/useSpotifyAuth';
 import styles from './Dashboard.module.css'
 
@@ -17,34 +16,46 @@ function Dashboard() {
 
   return (
     <>
-    <div className={styles.dashboardContainer}>
+    <br />
+    <h2 className={styles.pageTitle}>Dashboard</h2>
+    <br />
+    <div className={styles.pageContainer}>
       <br />
-      <section className={styles.dashboardSection}>
-        <h2 className={styles.dashboardSectionTitle}>Suas playlists</h2>
-        {/* Aqui vamos mostrar as playlists do usuário */}
-      </section>
-      <section className={styles.dashboardSection}>
-        <h2 className={styles.dashboardSectionTitle}>O Melhor de Cada Artista</h2>
-        {/* Aqui vamos mostrar o This is de dos 6 artistas favoritos do usuário */}
-      </section>
-      <section className={styles.dashboardSection}>
-        <h2 className={styles.dashboardSectionTitle}>#EssaÉTuaVibe</h2>
-        {/* Aqui vamos mostrar músicas parecidas com o gosto musical do usuário */}
-      </section>
-      <section className={styles.dashboardSection}>
-        <h2 className={styles.dashboardSectionTitle}>Já Ouviu Essas?</h2>
-        {/* Aqui vamos recomendar 6 músicas aleatórias para o usuário, vai que cola? */}
-      </section>
-      {token ? (
-        <div className={styles.dashBoardAlertSuccess}>
-          <h2>Logado com Spotify! Token recebido com sucesso.</h2>
+      <section className={styles.pageSection}>
+        <div className={styles.pageBox}>
+          <h2 className={styles.dashboardSectionTitle}>Suas playlists</h2>
         </div>
+      </section>
+      <section className={styles.pageSection}>
+        <div className={styles.pageBox}>
+          <h2 className={styles.dashboardSectionTitle}>O Melhor de Cada Artista</h2>
+        </div>
+      </section>
+      <section className={styles.pageSection}>
+        <div className={styles.pageBox}>
+          <h2 className={styles.dashboardSectionTitle}>#EssaÉTuaVibe</h2>
+        </div>
+      </section>
+      <section className={styles.pageSection}>
+        <div className={styles.pageBox}>
+          <h2 className={styles.dashboardSectionTitle}>Já Ouviu Essas?</h2>
+        </div>
+      </section>
+      <section className={styles.pageSection}>
+        <div className={styles.pageBox}>
+          {/* Teste de Token */}
+          {token ? (
+            <div className={styles.dashBoardAlertSuccess}>
+              <h2>Logado com Spotify! Token recebido com sucesso.</h2>
+            </div>
 
-      ) : (
-        <div className={styles.dashBoardAlertWarning}>
-          <h2>Faça login para acessar o Dashboard.</h2>
+          ) : (
+            <div className={styles.dashBoardAlertWarning}>
+              <h2>Faça login para acessar o Dashboard.</h2>
+            </div>
+          )}
         </div>
-      )}
+      </section>
     </div>
     </>
 

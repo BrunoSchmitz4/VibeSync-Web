@@ -1,5 +1,34 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
 
+
+/* Paleta de cores do Figma */
+/* 
+Dark Mode
+
+Fundo principal (body)	#121212
+Texto primário (padrão)	#e0e0e0
+Título	#00ffb3
+Section (backgroun)	#1b1b1b
+Card de conteúdo (background)	#1e1e1e
+botão primário (padrão)	#1f1f1f
+Botão (hover)	#2c2c2c
+Card de conteúdo (hover) #00ffb3
+
+
+Light Mode
+
+Fundo principal (body)	#ffffff
+Texto primário (padrão)	#121212
+Título	#1db954
+Section (backgroun)	#f7f7f7
+Card de conteúdo (background)	#ffffff
+botão primário (padrão)	#1db954
+Botão (hover)	#ffffff
+Card de conteúdo (hover) #00ffb3
+*/
+
+
+/* Reset e fonte padrão */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,23 +36,131 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-    overflow: auto;
-  scrollbar-width: none; /* Para navegadores como Firefox */
-  -ms-overflow-style: none; /* Para Internet Explorer e Edge antigo */
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge antigo */
+  height: 100vh;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-body {
-  margin: 0;
+/* Dark Mode (padrão) */
+body[data-theme="dark"] {
   background-color: #121212;
   color: #e0e0e0;
-  font-family: 'Poppins', sans-serif;
 }
 
+.pageTitle {
+  width: 80%;
+  font-size: 24px;
+  color: #00FFB3;
+  text-align: start;
+  margin: auto;
+}
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px;
+  margin: auto;
+  max-width: 1500px;
+  height: max-content;
+  background-color: #1b1b1b;
+  border: none;
+  border-radius: 8px;
+}
+
+.pageSection {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  gap: 20px;
+  padding: 20px;
+  background-color: #1b1b1b;
+  border-radius: 8px;
+}
+
+.pageBox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+body .pageContent {
+
+}
+
+body[data-theme="dark"] .playlistSection,
+body[data-theme="dark"] .descobertaSection,
+body[data-theme="dark"] .artistSection {
+  background-color: #1b1b1b;
+  color: #e0e0e0;
+}
+
+body[data-theme="dark"] .playlistCard,
+body[data-theme="dark"] .productCard {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+/* Tema Claro (inspirado no Light Mode do Spotify) */
+body[data-theme="light"] {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+body[data-theme="light"] .playlistSection,
+body[data-theme="light"] .descobertaSection,
+body[data-theme="light"] .artistSection {
+  background-color: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  color: #121212;
+}
+
+body[data-theme="light"] .playlistCard,
+body[data-theme="light"] .productCard {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  color: #121212;
+}
+
+body[data-theme="light"] .playlistCard:hover,
+body[data-theme="light"] .productCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: scale(1.03);
+}
+
+/* Tema Daltônico / Alto Contraste */
+body[data-theme="contrast"] {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body[data-theme="contrast"] .playlistSection,
+body[data-theme="contrast"] .descobertaSection,
+body[data-theme="contrast"] .artistSection {
+  background-color: #000000 !important;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+body[data-theme="contrast"] .playlistCard,
+body[data-theme="contrast"] .productCard {
+  background-color: #000000 !important;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+/* Estilo geral */
 h1 {
   font-family: 'Montserrat', sans-serif;
   color: #00ffb3;
@@ -34,6 +171,7 @@ h1 {
   margin-top: 50px;
 }
 
+/* Botão padrão */
 button {
   background-color: #1f1f1f;
   color: #00ffb3;
@@ -42,9 +180,9 @@ button {
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #2c2c2c;
 }
-
