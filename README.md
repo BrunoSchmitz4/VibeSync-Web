@@ -11,7 +11,18 @@
 
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)  ![Badge licença mit](http://img.shields.io/static/v1?label=LICENÇA&message=MIT&color=PINK&style=for-the-badge)
 
+
 **VibeSync** é uma aplicação web que permite a criação de playlists personalizadas com base em emoções, palavras-chave e preferências musicais. Com integração à **API do Spotify**, o sistema sugere músicas que combinam com o momento do usuário, tornando a descoberta musical mais intuitiva e divertida.  
+
+// Pontuação de Acessibilidade VibeSync:
+Home - 100
+Dashboard - 93 (Contraste ausente)
+Criador - 87 (Selects sem Labels linkados)
+Descoberta - 100
+Minhas Playlists - 93 (Contraste ausente)
+Marketplace - 99 (Alt nas imagens ausente)
+Configurações - 93 (Selects sem Labels linkados)
+
 
 # :hammer: Funcionalidades do projeto
 - `Busca Inteligente` – Gere playlists com base em sentimentos, atividades ou palavras-chave.  
