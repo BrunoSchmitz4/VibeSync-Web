@@ -32,8 +32,8 @@ function Config() {
       <div className={styles.configContainer}>
         <div className={styles.configSection}>
           <div className={styles.configBox}>
-            <label className={styles.configLabel}>Tema:</label>
-              <select value={theme} onChange={handleThemeChange} className={styles.configSelect}>
+            <label for="themeSelect" className={styles.configLabel}>Tema:</label>
+              <select id="themeSelect" value={theme} onChange={handleThemeChange} className={styles.configSelect}>
                 <option value="dark">Escuro</option>
                 <option value="light">Claro</option>
                 <option value="contrast">Daltônico (Alto Contraste)</option>
