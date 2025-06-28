@@ -20,6 +20,7 @@ function Dashboard() {
   const token = localStorage.getItem("access_token");
 
   useEffect(() => {
+    document.title = "VibeSync | Dashboard";
     const fetchPlaylists = async () => {
       try {
         const res = await fetch("https://api.spotify.com/v1/me/playlists?limit=50", {
@@ -56,13 +57,14 @@ function Dashboard() {
     <h2 className={styles.pageTitle}>Dashboard</h2>
     <br />
     <div className={styles.pageContainer}>
-      <section className={styles.pageSection}>
-        <div className={styles.sectionTitle}>Suas playlists</div>
+      <section className={styles.pageSection}
+      style={{ animationDelay: `${0.2}s` }}>
+        <h2 className={styles.sectionTitle}>Suas playlists</h2>
         <div className={styles.pageBox}>
             {playlists.map((playlist) => (
             <div key={playlist.id} className={styles.playlistCard}>
               {playlist.images?.[0]?.url && (
-                <img src={playlist.images[0].url} alt={playlist.name} />
+                <img className={styles.playlistImage} src={playlist.images[0].url} alt={playlist.name} />
               )}
               <div className={styles.playlistInfo}>
                 <h3 className={styles.playlistName}>{playlist.name}</h3>
@@ -86,7 +88,7 @@ function Dashboard() {
             {playlists.map((playlist) => (
             <div key={playlist.id} className={styles.playlistCard}>
               {playlist.images?.[0]?.url && (
-                <img src={playlist.images[0].url} alt={playlist.name} />
+                <img className={styles.playlistImage} src={playlist.images[0].url} alt={playlist.name} />
               )}
               <div className={styles.playlistInfo}>
                 <h3 className={styles.playlistName}>{playlist.name}</h3>
@@ -110,7 +112,7 @@ function Dashboard() {
             {playlists.map((playlist) => (
             <div key={playlist.id} className={styles.playlistCard}>
               {playlist.images?.[0]?.url && (
-                <img src={playlist.images[0].url} alt={playlist.name} />
+                <img className={styles.playlistImage} src={playlist.images[0].url} alt={playlist.name} />
               )}
               <div className={styles.playlistInfo}>
                 <h3 className={styles.playlistName}>{playlist.name}</h3>
@@ -134,7 +136,7 @@ function Dashboard() {
             {playlists.map((playlist) => (
             <div key={playlist.id} className={styles.playlistCard}>
               {playlist.images?.[0]?.url && (
-                <img src={playlist.images[0].url} alt={playlist.name} />
+                <img className={styles.playlistImage} src={playlist.images[0].url} alt={playlist.name} />
               )}
               <div className={styles.playlistInfo}>
                 <h3 className={styles.playlistName}>{playlist.name}</h3>

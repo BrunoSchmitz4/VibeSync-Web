@@ -27,6 +27,11 @@ Botão (hover)	#ffffff
 Card de conteúdo (hover) #00ffb3
 */
 
+/* Regras de Estilização */
+/* 
+ - Bordas de containers, sections cards etc: 8px de radius
+*/
+
 
 /* Reset e fonte padrão */
 body {
@@ -95,10 +100,6 @@ body[data-theme="dark"] {
   width: 100%;
 }
 
-body .pageContent {
-
-}
-
 body[data-theme="dark"] .playlistSection,
 body[data-theme="dark"] .descobertaSection,
 body[data-theme="dark"] .artistSection {
@@ -114,30 +115,68 @@ body[data-theme="dark"] .productCard {
 
 /* Tema Claro (inspirado no Light Mode do Spotify) */
 body[data-theme="light"] {
-  background-color: #e6e6e6;
-  color: #121212;
-}
-
-body[data-theme="light"] .playlistSection,
-body[data-theme="light"] .descobertaSection,
-body[data-theme="light"] .artistSection {
-  background-color: #f7f7f7;
-  border: 1px solid #e0e0e0;
-  color: #121212;
-}
-
-body[data-theme="light"] .playlistCard,
-body[data-theme="light"] .productCard {
   background-color: #ffffff;
-  border: 1px solid #e0e0e0;
   color: #121212;
 }
 
-body[data-theme="light"] .playlistCard:hover,
-body[data-theme="light"] .productCard:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transform: scale(1.03);
+/* Títulos principais */
+body[data-theme="light"] .pageTitle,
+body[data-theme="light"] .sectionTitle,
+body[data-theme="light"] .boxTitle,
+body[data-theme="light"] .contentTitle {
+  color: #1db954;
 }
+
+/* Containers principais */
+body[data-theme="light"] .pageContainer {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+body[data-theme="light"] .pageSection {
+  background-color: #f7f7f7;
+  color: #121212;
+  border-radius: 8px;
+}
+
+/* Box de conteúdo */
+body[data-theme="light"] .pageBox,
+body[data-theme="light"] .cardContainer {
+  background-color: #ffffff;
+  color: #121212;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+body[data-theme="light"] .cardContainer:hover {
+  background-color: #00ffb3;
+  color: #121212;
+}
+
+/* Textos */
+body[data-theme="light"] .contentSpan,
+body[data-theme="light"] .contentText {
+  color: #121212;
+}
+
+/* Botões */
+body[data-theme="light"] button {
+  background-color: #1db954;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+body[data-theme="light"] button:hover {
+  background-color: #ffffff;
+  color: #1db954;
+  border: 1px solid #1db954;
+}
+
 
 /* Tema Daltônico / Alto Contraste */
 body[data-theme="contrast"] {

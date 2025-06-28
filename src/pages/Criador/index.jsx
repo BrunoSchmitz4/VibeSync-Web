@@ -77,14 +77,16 @@ function Criador() {
       <br />
       <h2 className={styles.pageTitle}>Criador de Playlist</h2>
       <br />
-      <div className={styles.pageContainer}>
+      <div className={styles.pageContainer}
+      style={{ animationDelay: `${0.2}s` }}>
         <section className={styles.pageSection}>
           <h2 className={styles.sectionTitle}>Qual vibe terá sua nova playlist?</h2>
 
           <form onSubmit={handleSubmit} className={styles.formContainer}>
             <div className={styles.formItem}>
-              <label className={styles.formLabel}>Título:</label>
+              <label for='titleInput' className={styles.formLabel}>Título:</label>
               <input
+                id='titleInput'
                 className={styles.formTextInput}
                 type="text"
                 placeholder="Insira um título..."
@@ -94,8 +96,8 @@ function Criador() {
               />
             </div>
             <div className={styles.formItem}>
-              <label className={styles.formLabel}>Gênero Musical:</label>
-              <select value={genre} onChange={(e) => setGenre(e.target.value)} className={styles.formSelect} required>
+              <label for='genderSelect' className={styles.formLabel}>Gênero Musical:</label>
+              <select id='genderSelect' value={genre} onChange={(e) => setGenre(e.target.value)} className={styles.formSelect} required>
                 <option value="">Selecione</option>
                 <option value="pop">Pop</option>
                 <option value="rock">Rock</option>
@@ -106,8 +108,8 @@ function Criador() {
               </select>
             </div>
             <div className={styles.formItem}>
-              <label className={styles.formLabel}>Sentimento:</label>
-              <select value={mood} onChange={(e) => setMood(e.target.value)} className={styles.formSelect} required>
+              <label for='feelSelect' className={styles.formLabel}>Sentimento:</label>
+              <select id='feelSelect' value={mood} onChange={(e) => setMood(e.target.value)} className={styles.formSelect} required>
                 <option value="">Selecione</option>
                 <option value="feliz">Feliz</option>
                 <option value="triste">Triste</option>
@@ -116,8 +118,9 @@ function Criador() {
               </select>
             </div>            
             <div className={styles.formItem}>
-              <label className={styles.formLabel}>Baseado nas suas playlists?</label>
+              <label for='playlistSelect' className={styles.formLabel}>Baseado nas suas playlists?</label>
               <select
+                id='playlistSelect'
                 value={familiarity}
                 onChange={(e) => setFamiliarity(e.target.value)}
                 className={styles.formSelect}
@@ -129,8 +132,9 @@ function Criador() {
               </select>
             </div>
             <div className={styles.formItem}>
-              <label className={styles.formLabel}>Descrição (opcional):</label>
+              <label for='descInput' className={styles.formLabel}>Descrição (opcional):</label>
               <input
+                id='descInput'
                 className={styles.formTextInputLarge}
                 type="text"
                 placeholder="Escreva uma descrição..."
@@ -139,8 +143,9 @@ function Criador() {
               />
             </div>
             <div className={styles.formItem}>
-              <label className={styles.formLabel}>Capa (opcional) - JPEG:</label>
+              <label for='imgInput' className={styles.formLabel}>Capa (opcional) - JPEG:</label>
               <input
+                id='imgInput'
                 className={styles.formFileInput}
                 type="file"
                 accept="image/jpeg"

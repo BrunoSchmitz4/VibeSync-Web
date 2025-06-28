@@ -33,10 +33,10 @@
 }
 
 .sectionTitle {
-  width: 90%;
+  width: 100%;
   color: #e0e0e0;
   font-size: 20px;
-  text-align: start;
+  text-align: center;
 }
 
 .pageBox {
@@ -103,7 +103,7 @@
 
 .descobertaBoxContent iframe {
   width: 400px;
-  border-radius: 10px;
+  border-radius: 8px;
   max-width: 80%;
   flex: 1 1 45%;
   min-width: 200px;

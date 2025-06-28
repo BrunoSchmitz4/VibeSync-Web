@@ -11,13 +11,15 @@ function Home() {
   return (
     <>
       <br />
-      <h2 className={styles.pageTitle}>Bem-vindo(a)</h2>
+      <h2 className={styles.pageTitle}>Bem-vindo(a) à VibeSync! Eai? O que vai ouvir hoje?</h2>
       <br />
-      <div className={styles.pageContainer}>
+      <div className={styles.pageContainer} 
+      style={{ animationDelay: `${0.2}s` }}>
         <section className={styles.pageSection}>
           <div className={styles.pageBox}>
             <div className={styles.pageContent}>
               <h2 className={styles.contentTitle}>O que é o VibeSync?</h2>
+              <hr />
               <span className={styles.contentSpan}>
                 <p className={styles.contentText}>
                   "O VibeSync é uma aplicação web feita para ajudar você a criar e adicionar novas playlists de música à sua rotina diária. Seja criando novas do zero, ou descobrindo outras já prontas — apenas aguardando para serem ouvidas."
@@ -26,6 +28,21 @@ function Home() {
               </span>
             </div>
           </div>
+          <div className={styles.pageBigBox}>
+            <h2 className={styles.contentTitle}>Pronto para começar?</h2>
+            <hr />
+            <div className={styles.bigBoxContent}>
+              <a href="/" className={styles.bigBoxContentAnchor}>Home</a>
+              <a href="/" className={styles.bigBoxContentAnchor}>Dashboard</a>
+              <a href="/" className={styles.bigBoxContentAnchor}>Criador</a>
+              <a href="/" className={styles.bigBoxContentAnchor}>Descoberta</a>
+              <a href="/" className={styles.bigBoxContentAnchor}>Minhas Playlists</a>
+              <a href="/" className={styles.bigBoxContentAnchor}>Marketplace</a>
+              <a href="/" className={styles.bigBoxContentAnchor}>Configurações</a>
+            </div>
+          </div>
+        </section>
+        <section className={styles.pageSection}>
           <iframe
             className={styles.pageIframe}
             title="Spotify Hipsters.Tech Podcast iFrame"
@@ -58,6 +75,7 @@ function Home() {
               ].map((card, index) => (
                 <div key={index} className={styles.homeCard}>
                   <h2 className={styles.homeCardTitle}>{card.title}</h2>
+                  <hr />
                   <span className={styles.homeCardDesc}>
                     <p>{card.desc}</p>
                   </span>

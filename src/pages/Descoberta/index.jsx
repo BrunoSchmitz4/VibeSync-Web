@@ -6,17 +6,23 @@ import SpotifyEmbed from "components/SpotifyEmbed"
 function Descoberta() {
 
   const similarTracks = [
-    "7DQotDUGnJkXgNJv363GXF",
-    "3mJncxEu2NrKYfRvoWiVfm",
     "096gZM7wp5GKHBwtWY3d0z",
     "7o2CTH4ctstm8TNelqjb51"
   ];
 
   const similarPlaylists = [
-    "5TUxgTIxzLbLVh7RUf9V8i",
-    "37i9dQZF1DX2sUQwD7tbmL",
     "37i9dQZF1EQn4jwNIohw50",
     "37i9dQZF1DWXMg4uP5o3dm"
+  ];
+
+  const newTracks = [
+    "7DQotDUGnJkXgNJv363GXF",
+    "3mJncxEu2NrKYfRvoWiVfm"
+  ];
+
+  const newPlaylists = [
+    "5TUxgTIxzLbLVh7RUf9V8i",
+    "37i9dQZF1DX2sUQwD7tbmL"
   ];
 
   return (
@@ -54,8 +60,8 @@ function Descoberta() {
             <h3 className={styles.boxTitle}>Músicas</h3>
             <div className={styles.pageContent}>
               <div className={styles.descobertaBoxContent}>
-                {similarTracks.map((id, index) => (
-                  <SpotifyEmbed key={id} title={`similarTrack${index}`} src={`https://open.spotify.com/embed/track/${id}`} />
+                {newTracks.map((id, index) => (
+                  <SpotifyEmbed key={id} title={`newTracks${index}`} src={`https://open.spotify.com/embed/track/${id}`} />
                 ))}
               </div>
             </div>
@@ -63,8 +69,8 @@ function Descoberta() {
               <h3 className={styles.boxTitle}>Playlists</h3>
               <div className={styles.pageContent}>
                 <div className={styles.descobertaBoxContent}>
-                  {similarPlaylists.map((id, index) => (
-                    <SpotifyEmbed key={id} title={`similarPlaylists${index}`} src={`https://open.spotify.com/embed/playlist/${id}`} />
+                  {newPlaylists.map((id, index) => (
+                    <SpotifyEmbed key={id} title={`newPlaylists${index}`} src={`https://open.spotify.com/embed/playlist/${id}`} />
                   ))}
                 </div>
               </div>

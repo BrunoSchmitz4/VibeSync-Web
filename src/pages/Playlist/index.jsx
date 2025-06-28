@@ -46,10 +46,11 @@ function Playlist() {
       <div className={styles.playlistContainer}>
         <br />
         <section className={styles.playlistSection}>
+          <h2 className={styles.sectionTitle}>Suas playlists</h2>
           {playlists.map((playlist) => (
             <div key={playlist.id} className={styles.playlistCard}>
               {playlist.images?.[0]?.url && (
-                <img src={playlist.images[0].url} alt={playlist.name} />
+                <img className={styles.playlistImage} src={playlist.images[0].url} alt={playlist.name} />
               )}
 
 
