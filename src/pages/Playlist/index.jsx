@@ -8,6 +8,7 @@ function Playlist() {
   const token = localStorage.getItem("access_token");
 
   useEffect(() => {
+    document.title = "VibeSync | Minhas Playlists"
     const fetchPlaylists = async () => {
       try {
         const res = await fetch("https://api.spotify.com/v1/me/playlists?limit=50", {
@@ -44,7 +45,6 @@ function Playlist() {
         <h2 className={styles.pageTitle}>Suas playlists</h2>
     <br />
       <div className={styles.playlistContainer}>
-        <br />
         <section className={styles.playlistSection}>
           <h2 className={styles.sectionTitle}>Suas playlists</h2>
           {playlists.map((playlist) => (

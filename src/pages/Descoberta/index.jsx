@@ -1,7 +1,7 @@
 // src/pages/Descoberta.jsx
 import styles from "./Descoberta.module.css";
 import SpotifyEmbed from "components/SpotifyEmbed"
-
+import { useEffect } from "react";
 
 function Descoberta() {
 
@@ -24,6 +24,10 @@ function Descoberta() {
     "5TUxgTIxzLbLVh7RUf9V8i",
     "37i9dQZF1DX2sUQwD7tbmL"
   ];
+
+  useEffect(() => {
+      document.title = "VibeSync | Descoberta";
+  }, []);
 
   return (
     <>

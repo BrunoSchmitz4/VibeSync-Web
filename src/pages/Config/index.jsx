@@ -7,12 +7,14 @@ function Config() {
 
   // Carrega o tema salvo no carregamento da página
   useEffect(() => {
+    document.title = "VibeSync | Configurações";
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
       setTheme(savedTheme);
       document.body.setAttribute("data-theme", savedTheme);
     }
   }, []);
+
 
   // Atualiza o tema no body e salva no localStorage
   const handleThemeChange = (event) => {

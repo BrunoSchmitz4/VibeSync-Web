@@ -1,5 +1,5 @@
 // src/pages/Criador/index.jsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './Criador.module.css';
 
 function Criador() {
@@ -71,6 +71,10 @@ function Criador() {
       };
       reader.onerror = (error) => reject(error);
     });
+
+  useEffect(() => {
+    document.title = "VibeSync | Criador";
+  }, []);
 
   return (
     <>

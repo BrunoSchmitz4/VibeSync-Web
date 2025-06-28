@@ -10,6 +10,7 @@ function Marketplace() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    document.title = "VibeSync | Marketplace"
     if (!token) return;
 
     fetch("https://api.spotify.com/v1/me/top/artists?limit=5", {
@@ -29,22 +30,24 @@ function Marketplace() {
       });
   }, [token]);
 
-  if (!token || loading) {
-    return <p className={styles.loading}>Carregando dados dos artistas...</p>;
-  }
+  if (!token || loading) return <p className={styles.loading}>Carregando dados dos artistas...</p>;
 
 
   return (
-    <div className={styles.marketplaceContainer}>
-      <h1 className={styles.marketplaceTitle}>Marketplace de Artistas</h1>
-      {artists.map((artist, index) => (
-        <ArtistSection
-          key={artist.id}
-          artist={artist}
-          style={{ animationDelay: `${index * 0.2}s` }}
-        />
-      ))}
+    <>
+      <br />
+        <h2 className={styles.pageTitle}>Suas playlists</h2>
+      <br />
+      <div className={styles.marketplaceContainer}>
+        {artists.map((artist, index) => (
+          <ArtistSection
+            key={artist.id}
+            artist={artist}
+            style={{ animationDelay: `${index * 0.2}s` }}
+          />
+        ))}
     </div>
+    </>
   );
 }
 
