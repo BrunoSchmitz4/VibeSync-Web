@@ -75,6 +75,7 @@ Configurações - 93 (Selects sem Labels linkados)
 # Como Executar o Projeto
 
 ### **Pré-requisitos**
+Obs: ainda não é possível executar o projeto, devido o back-end ainda não ter sido versionado. Em breve será disponibilizado.
 - Instale o **Node JS** e o **Git**
 
 - Clone o repositório do projeto:
