@@ -1,4 +1,4 @@
-<h1 id="Título-e-Imagem-de-capa" align="center">🎵 VibeSync – Enriquecendo sua Mixtape Diária do Spotify! </h1>
+<h1 id="Título-e-Imagem-de-capa" align="center">🎵 VibeSync – Enriquecendo sua Mixtape Diária do Spotify ;) </h1>
 
 ![Capa do projeto](https://github.com/user-attachments/assets/9dca02c8-2fc0-47ee-af17-214208883c8e)
 
