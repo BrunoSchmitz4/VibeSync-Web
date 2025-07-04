@@ -41,11 +41,6 @@ Configurações - 93 (Selects sem Labels linkados)
   <li>Bulma JS - Auxiliar no desenvolvimento de componentes</li>
   <li>Animate CSS - Dar um ✨ tchan ✨ no projeto</li>
   <li>JQuery - Mnipulação do DOM (com JSX)</li>
-</ul>
-<h3>Tecnologias Back-End</h3>
-<ul>
-  <li>Node JS - Build de Javscript</li>
-  <li>Express JS - Framework para Node JS (fornece os métodos HTTPS)</li>
   <li>Javascript - Tá ai né...</li>
 </ul>
 <h3>Versionamento</h3>
