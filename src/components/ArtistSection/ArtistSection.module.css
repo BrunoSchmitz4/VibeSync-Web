@@ -6,7 +6,7 @@
   align-items: flex-start;
   justify-content: center;
   border-radius: 8px;
-  background-color: #1b1b1b;
+  background-color: #1e1e1e;
   animation: fadeInUp 0.6s ease forwards;
   opacity: 0;
 }
@@ -21,6 +21,8 @@
 .artistCardName {
   text-align: center;
   width: 100%;
+  font-weight: 600;
+  color: #00ffb3;
 }
 
 .artistCardGroup {
@@ -31,13 +33,25 @@
   width: 100%;
 }
 
-.artistCardBtn {
+.artistCardBtnLeft {
   text-align: center;
   width: 50%;
   background-color: #147737;
   color: white;
   font-weight: bold;
-  border-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-right: 0.5px solid white;
+}
+
+.artistCardBtnRight {
+  text-align: center;
+  width: 50%;
+  background-color: #147737;
+  color: white;
+  font-weight: bold;
+  border-bottom-right-radius: 8px;
+  border-left: 0.5px solid white;
+
 }
 
 @media (max-width: 768px) {

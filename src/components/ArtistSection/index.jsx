@@ -16,7 +16,7 @@ function ArtistSection({ artist, style }) {
           href={`https://open.spotify.com/artist/${artist.id}`}
           target="_blank"
           rel="noopener noreferrer"
-          className={styles.artistCardBtn}
+          className={styles.artistCardBtnLeft}
         >
           Ver Perfil
         </a>
@@ -24,7 +24,7 @@ function ArtistSection({ artist, style }) {
           href={`https://open.spotify.com/artist/${artist.id}/concerts`}
           target="_blank"
           rel="noopener noreferrer"
-          className={styles.artistCardBtn}
+          className={styles.artistCardBtnRight}
         >
           Ver Shows
         </a>
