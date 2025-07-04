@@ -3,7 +3,6 @@ import styles from "./Config.module.css";
 
 function Config() {
   const [theme, setTheme] = useState("dark"); // tema padrão
-  // const [daltonic, setDaltonic] = useState(false);
 
   // Carrega o tema salvo no carregamento da página
   useEffect(() => {

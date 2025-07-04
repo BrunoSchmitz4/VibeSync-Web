@@ -54,10 +54,11 @@ function Playlist() {
               )}
 
 
-              <div className={styles.playlistInfo}>
-                <h3 className={styles.playlistName}>{playlist.name}</h3>
-                {/* <p><strong>Dono:</strong> {playlist.owner.display_name}</p> */}
-                <p><strong>Músicas:</strong> {playlist.tracks.total}</p>
+            <div className={styles.playlistInfo}>
+              <h3 className={styles.playlistName}>{playlist.name}</h3>
+              <p><strong>Músicas:</strong> {playlist.tracks.total}</p>
+
+              <div className={styles.cardBtnGroup}>
                 <a
                   href={playlist.external_urls.spotify}
                   target="_blank"
@@ -66,7 +67,16 @@ function Playlist() {
                 >
                   Abrir no Spotify
                 </a>
+                <a
+                  href={`/editar-playlist/${playlist.id}`}
+                  className={styles.editBtn}
+                >
+                  Editar
+                </a>
               </div>
+            </div>
+
+
             </div>
           ))}
         </section>

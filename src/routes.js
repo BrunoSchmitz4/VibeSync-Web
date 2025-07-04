@@ -8,6 +8,7 @@ import Playlist from "./pages/Playlist";
 import Config from "./pages/Config";
 import useSpotifyAuth from "./hooks/useSpotifyAuth";
 import Marketplace from "pages/Marketplace";
+import EditPlaylist from './pages/EditPlaylist';
 
 function AppRoutes() {
   useSpotifyAuth(); // ativa o hook de login no carregamento da aplicação
@@ -23,6 +24,7 @@ function AppRoutes() {
           <Route path="playlists" element={<Playlist />} />
           <Route path="marketplace" element={<Marketplace />} />
           <Route path="config" element={<Config />} />
+          <Route path="/editar-playlist/:id" element={<EditPlaylist />} />
         </Route>
       </Routes>
     </BrowserRouter>

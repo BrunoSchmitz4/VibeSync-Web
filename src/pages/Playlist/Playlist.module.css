@@ -95,18 +95,40 @@
   color: #00ffb3;
 }
 
+.cardBtnGroup {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+}
+
 .openBtn {
   display: inline-block;
   margin-top: 0.5rem;
-  background-color: #147737;
   padding: 0.5rem 1rem;
+  text-align: center;
+  background-color: #147737;
   color: white;
-  border-radius: 8px;
-  text-decoration: none;
   font-weight: bold;
+  font-size: 14px;
+  width: 70%;
+  border-radius: 8px;
+
 }
 
-
+.editBtn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
+  background: none;
+  border: 1px solid #147737;
+  color: #147737;
+  font-weight: bold;
+  font-size: 14px;
+  width: 30%;
+  border-radius: 8px;
+}
 .loading {
   text-align: center;
   padding: 2rem;

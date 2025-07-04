@@ -1,43 +1,35 @@
-// src/components/ArtistSection/index.jsx
-import styles from "./ArtistSection.module.css";
-import ProductCard from "components/ProductCard";
+import styles from './ArtistSection.module.css'
 
-function ArtistSection({ artist }) {
-  const products = [
-    {
-      name: `Álbum "Essenciais de ${artist.name}"`,
-      image: artist.images[0]?.url,
-      url: artist.external_urls.spotify,
-    },
-    {
-      name: `Camiseta "${artist.name} World Tour"`,
-      image: artist.images[1]?.url || artist.images[0]?.url,
-      url: artist.external_urls.spotify,
-    },
-    {
-      name: `Ingressos para show de ${artist.name}`,
-      image: artist.images[2]?.url || artist.images[0]?.url,
-      url: artist.external_urls.spotify,
-    },
-  ];
-
+function ArtistSection({ artist, style }) {
   return (
-<section className={styles.artistSection}>
-  <img
-    className={styles.artistImage}
-    src={artist.images[0]?.url}
-    alt={`Foto de ${artist.name}`}
-  />
-
-  <div className={styles.artistContent}>
-    <h2 className={styles.artistName}>{artist.name}</h2>
-    <div className={styles.productList}>
-      {products.map((product, idx) => (
-        <ProductCard key={idx} product={product} />
-      ))}
+    <div className={styles.artistCard} style={style}>
+      <img
+        src={artist.images?.[0]?.url}
+        alt={artist.name}
+        width="200"
+        height="200"
+        className={styles.artistCardImg}
+      />
+      <h3 className={styles.artistCardName}>{artist.name}</h3>
+      <div className={styles.artistCardGroup}>
+        <a
+          href={`https://open.spotify.com/artist/${artist.id}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.artistCardBtn}
+        >
+          Ver Perfil
+        </a>
+        <a
+          href={`https://open.spotify.com/artist/${artist.id}/concerts`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.artistCardBtn}
+        >
+          Ver Shows
+        </a>
+      </div>
     </div>
-  </div>
-</section>
   );
 }
 
