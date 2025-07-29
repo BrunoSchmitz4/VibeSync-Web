@@ -154,21 +154,6 @@ function Dashboard() {
           ))}
         </div>
       </section>
-
-      {/* <section className={styles.pageSection}>
-        <div className={styles.pageBox}>
-          {tokenAuth ? (
-            <div className={styles.dashBoardAlertSuccess}>
-              <h2>Logado com Spotify! Token recebido com sucesso.</h2>
-            </div>
-
-          ) : (
-            <div className={styles.dashBoardAlertWarning}>
-              <h2>Faça login para acessar o Dashboard.</h2>
-            </div>
-          )}
-        </div>
-      </section> */}
     </div>
     </>
 

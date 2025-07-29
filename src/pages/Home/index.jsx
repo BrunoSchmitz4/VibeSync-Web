@@ -2,6 +2,8 @@
 import { useEffect } from "react";
 import styles from './Home.module.css';
 import imgMusics from '../../assets/ImageWallpaperSpotifyMusics.jpg';
+import { Link, useLocation } from "react-router-dom";
+ 
 
 function Home() {
   useEffect(() => {
@@ -33,12 +35,12 @@ function Home() {
             <hr />
             <div className={styles.bigBoxContent}>
               <a href="/" className={styles.bigBoxContentAnchor}>Home</a>
-              <a href="/" className={styles.bigBoxContentAnchor}>Dashboard</a>
-              <a href="/" className={styles.bigBoxContentAnchor}>Criador</a>
-              <a href="/" className={styles.bigBoxContentAnchor}>Descoberta</a>
-              <a href="/" className={styles.bigBoxContentAnchor}>Minhas Playlists</a>
-              <a href="/" className={styles.bigBoxContentAnchor}>Marketplace</a>
-              <a href="/" className={styles.bigBoxContentAnchor}>Configurações</a>
+              <a href="/dashboard" className={styles.bigBoxContentAnchor}>Dashboard</a>
+              <a href="/criador" className={styles.bigBoxContentAnchor}>Criador</a>
+              <a href="/descoberta" className={styles.bigBoxContentAnchor}>Descoberta</a>
+              <a href="/playlists" className={styles.bigBoxContentAnchor}>Minhas Playlists</a>
+              <a href="/Marketplace" className={styles.bigBoxContentAnchor}>Marketplace</a>
+              <a href="/config" className={styles.bigBoxContentAnchor}>Configurações</a>
             </div>
           </div>
         </section>

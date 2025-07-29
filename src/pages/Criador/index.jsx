@@ -109,6 +109,14 @@ function Criador() {
                 <option value="electronic">Eletrônica</option>
                 <option value="mpb">MPB</option>
                 <option value="sertanejo">Sertanejo</option>
+                <option value="funk">Funk</option>
+                <option value="indie">Indie</option>
+                <option value="jazz">Jazz</option>
+                <option value="reggae">Reggae</option>
+                <option value="kpop">K-Pop</option>
+                <option value="lofi">Lo-Fi</option>
+                <option value="classica">Clássica</option>
+                <option value="forro">Forró</option>
               </select>
             </div>
             <div className={styles.formItem}>
@@ -119,6 +127,16 @@ function Criador() {
                 <option value="triste">Triste</option>
                 <option value="motivado">Motivado</option>
                 <option value="relaxado">Relaxado</option>
+                <option value="agitado">Agitado</option>
+                <option value="irritado">Irritado</option>
+                <option value="nostalgico">Nostálgico</option>
+                <option value="romantico">Romântico</option>
+                <option value="melancolico">Melancólico</option>
+                <option value="empoderado">Empoderado</option>
+                <option value="apaixonado">Apaixonado</option>
+                <option value="divertido">Divertido</option>
+                <option value="solitario">Solitário</option>
+                <option value="esperancoso">Esperançoso</option>
               </select>
             </div>            
             <div className={styles.formItem}>
